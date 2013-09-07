@@ -13,10 +13,6 @@ class Bob
       message && message.end_with?('?')
     end
 
-    def statement?(message)
-      message && message.gsub(' ', '').match(/^[a-zA-Z',!\?\-\.]+$/) && message.end_with?('!', '.')
-    end
-
     def shouting?(message)
       message && message.gsub(' ', '').match(/^[0-9A-Z',%!#@\*\(\$\^\?\-\.]+(\??|!?)$/)
     end
