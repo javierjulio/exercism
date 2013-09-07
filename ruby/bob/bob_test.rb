@@ -77,7 +77,6 @@ class TeenagerTest < MiniTest::Unit::TestCase
   end
 
   def test_on_multiple_line_questions
-    skip
     assert_equal 'Whatever.', teenager.hey(%{
 Does this cryogenic chamber make me look fat?
 no})
