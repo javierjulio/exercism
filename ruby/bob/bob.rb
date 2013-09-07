@@ -14,7 +14,7 @@ class Bob
     end
 
     def shouting?(message)
-      message && message.gsub(' ', '').match(/^[0-9A-Z',%!#@\*\(\$\^\?\-\.]+(\??|!?)$/)
+      message && message.upcase == message
     end
 
     def silence?(message)
