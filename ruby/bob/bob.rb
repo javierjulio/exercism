@@ -1,6 +1,7 @@
 class Bob
 
   def hey(message)
+    message = String(message)
     return 'Fine. Be that way!' if silence?(message)
     return 'Woah, chill out!' if shouting?(message)
     return 'Sure.' if question?(message)
@@ -10,15 +11,15 @@ class Bob
   protected
 
     def shouting?(message)
-      message && message.upcase == message
+      message.upcase == message
     end
 
     def silence?(message)
-      message && message.strip == ''
+      message.strip == ''
     end
 
     def question?(message)
-      message && message.end_with?('?')
+      message.end_with?('?')
     end
 
 end
