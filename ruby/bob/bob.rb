@@ -9,16 +9,16 @@ class Bob
 
   protected
 
-    def question?(message)
-      message && message.end_with?('?')
-    end
-
     def shouting?(message)
       message && message.upcase == message
     end
 
     def silence?(message)
       message && message.strip == ''
+    end
+
+    def question?(message)
+      message && message.end_with?('?')
     end
 
 end
